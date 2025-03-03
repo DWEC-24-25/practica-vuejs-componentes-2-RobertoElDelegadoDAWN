@@ -8,10 +8,12 @@
   "description": "Práctica de Componentes de VueJS del módulo de Diseño de Interfaces Web.",
   "license": "GPL-3.0",
   "author": "Pedro Prieto",
-  "dependencies": {},
   "devDependencies": {
-    "chromedriver": "^96.0.0",
+    "chromedriver": "^132.0.2",
     "nightwatch": "^1.7.13",
     "serve-handler": "^6.1.3"
+  },
+  "dependencies": {
+    "node": "^23.7.0"
   }
 }
