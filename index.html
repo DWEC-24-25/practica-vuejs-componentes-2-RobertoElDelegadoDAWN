@@ -8,14 +8,24 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- TODO: Cargar CSS Bootstrap 5 (no es necesario el JS) -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>
 
-        <h1 id="autor">Autor: TU NOMBRE AQUÍ</h1>
-
-        <!-- https://vuejs.org/guide/introduction.html -->
+      <div class="container">
+        <div class="row">
+            <h1 id="autor">Autor: Roberto Blanquer</h1>
+        </div>
         <div id="app">
+            <div class="jumbotron">
+                <h1 id="title">{{ collection.title }}</h1>
+            </div>
+            <div class="row">
+                <item-data v-for="(item, index) in collection.items" :key="item.href" :item="item" :index="index"></item-data>
+            </div>
+        </div>
+    </div>
             <!--
                  TODO: Aplicación Vue 3. Ver archivo ./js/script.js
                - Mostrar el título de la colección dentro de un componente de Bootstrap 5. 
@@ -30,10 +40,10 @@
             <!-- TODO: Iterar sobre los items y mostrar cada uno usando el componente item-data -->
             
 
-        </div>
 
         <!-- TODO: Cargar librería Vue 3 y archivo js/script.js -->
-        
+        <script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.js"></script>
+    <script src="js/script.js"></script>
 
     </body>
 
